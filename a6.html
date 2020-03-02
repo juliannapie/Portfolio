@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Portfolio </title>
+    <link rel ="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+    <div class = "background">
+    <div class = "intro">
+      <a class = "a active" href="#"> HOME </a>
+      <a class = "b" href="#"> ABOUT ME </a>
+      <a  class = "c" href="#"> RESUME </a>
+      <a  class = "d" href="#">  CONTACT ME </a>
+    </div>
+
+    <div class ="stuff">
+      <div class="home">
+        <h1> Hello, I am Julianna Piechowicz </h1>
+        <hr>
+          <h2> Digital Culture Major</h2>
+      </div>
+
+
+      <div class ="about">
+      <p>  Hello, Welcome to my Portfolio! <br>
+        I am from Santa Fe, New Mexico, but am curently living in Arizona for school.
+        I am a college Sophmore at Arizona State University, majoring in Digital Culture with a focus in Media Processing.
+        This is my first year as a Digital Culture major. During my freshman year of college, I was majoring in Computer Science but decided I wanted to do something else.
+        I decided to switch majors because I wanted to explore the digital world more.
+        I am looking to get a better understanding of what Digital Culture is and how it can impact the world around me.
+      </p>
+
+        <p> <img src="https://scontent-lax3-2.xx.fbcdn.net/v/t1.0-9/30656171_872018629647679_1979330786393849856_n.jpg?_nc_cat=106&_nc_oc=AQmhURJxbF_Wd-Z80rBZlPDBTfYB_LNfVPnJtBS7fZfDC5AKJxUE2FzqKh40VUxugSk&_nc_ht=scontent-lax3-2.xx&oh=ee21f6912237f702d8110963d1d9c7aa&oe=5EC1DF55" alt="profile picture" style="width:250px;"></p>
+      </div>
+
+      <div class="info">
+         <h2>This is my Resume:  You can download it if needed</h2>
+            <iframe class="scribd_iframe_embed" title="Julianna Pie Chow i Cz" src="https://www.scribd.com/embeds/449676389/content?start_page=1&view_mode=scroll&show_recommendations=false&access_key=key-RDhPtdDGB0N1NvxCanm0"
+           width="900px" height="500px" frameborder="2"></iframe>
+      </div>
+
+      <div class="contact">
+        <h2>This is my Contact Information </h2>
+        <h3 class= "a2"> Phone Number (Text Only):  <a href="tel:(505)920-8809"> (505)920-8809 </a> </h3>
+
+        <h3 class= "a2"> Email: <a href="mailto:piechowicz.julianna2@gmail.com?subject=feedback"> piechowicz.julianna2@gmail.com</a></h3
+      </div>
+
+
+      </div>
+
+  </div>
+  <script src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript">
+
+    $(document).ready(function(){
+      $('a').click(function(){
+          var sel = $(this);
+        $('a').removeClass('active');
+        $(sel).addClass('active');
+      });
+
+      var $a = $('.a'),
+          $b = $('.b'),
+          $c = $('.c'),
+          $d = $('.d'),
+          $home = $('.home'),
+          $about = $('.about'),
+          $info = $('.info'),
+          $contact = $('.contact')
+          ;
+
+          $a.click(function(){
+            $home.fadeIn();
+            $about.fadeOut();
+            $info.fadeOut();
+            $contact.fadeOut();
+          });
+
+          $b.click(function(){
+            $about.fadeIn();
+            $home.fadeOut();
+            $info.fadeOut();
+            $contact.fadeOut();
+          });
+
+          $c.click(function(){
+            $info.fadeIn();
+            $about.fadeOut();
+            $home.fadeOut();
+            $contact.fadeOut();
+          });
+
+          $d.click(function(){
+            $contact.fadeIn();
+            $about.fadeOut();
+            $info.fadeOut();
+            $home.fadeOut();
+          });
+      });
+  </script>
+  </body>
+  </html>
